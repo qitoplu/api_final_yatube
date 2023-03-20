@@ -105,6 +105,9 @@ REST_FRAMEWORK = {
 }
 
 SIMPLE_JWT = {'ACCESS_TOKEN_LIFETIME': timedelta(days=1),
-              'AUTH_HEADER_TYPES': ('Bearer',), }
+              'AUTH_HEADER_TYPES': ('Bearer',),
+              'ROTATE_REFRESH_TOKENS': False,
+              'BLACKLIST_AFTER_ROTATION': False,
+              'UPDATE_LAST_LOGIN': False, }
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
